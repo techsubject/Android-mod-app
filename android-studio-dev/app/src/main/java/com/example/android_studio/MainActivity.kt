@@ -28,17 +28,29 @@ class MainActivity : AppCompatActivity() {
 
             insets
         }
-        val button = findViewById<Button>(R.id.button3)
+        val button = findViewById<Button>(R.id.bettercarsgtav)
 
         button.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
         }
-        val button2 = findViewById<Button>(R.id.button2)
+        val button2 = findViewById<Button>(R.id.f1carpackbutton)
 
         button2.setOnClickListener {
             val intent = Intent(this, Thirdactivity::class.java)
             startActivity(intent)
         }
+        val button3 = findViewById<Button>(R.id.f1carpackbutton)
+
+        button2.setOnClickListener {
+            val intent = Intent(this, Thirdactivity::class.java)
+            startActivity(intent)
+        }
+        val button4 = findViewById<Button>(R.id.homebutton)
+
+    button2.setOnClickListener {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
     }
 }

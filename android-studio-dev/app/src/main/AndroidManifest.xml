@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Androidstudio"
         tools:targetApi="31">
         <activity
+            android:name=".FourthActivity"
+            android:exported="false" />
+        <activity
             android:name=".Thirdactivity"
             android:exported="false" />
         <activity
