@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,73 +11,113 @@
     tools:context=".FourthActivity">
 
     <!-- HEADER -->
-
-    <EditText
-        android:id="@+id/editTextText"
+    <TextView
+        android:id="@+id/mainbar"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:background="@color/black"
         android:gravity="center"
-        android:inputType="text"
-        android:text="Buy mods for games"
+        android:text="Login"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- HOME BUTTON -->
     <ImageView
         android:id="@+id/homebutton"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
-        android:contentDescription="@null"
+        android:contentDescription="Home"
         android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="@id/editTextText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/editTextText"
+        app:layout_constraintTop_toTopOf="@id/mainbar"
+        app:layout_constraintBottom_toBottomOf="@id/mainbar"
         app:srcCompat="@drawable/_049_13551_removebg_preview" />
 
-    <EditText
-        android:id="@+id/editTextTextPassword"
+    <!-- LOGIN TITLE -->
+    <TextView
+        android:id="@+id/loginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="106dp"
-        android:layout_marginBottom="409dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_marginTop="65dp"
+        android:text="Welcome back!"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/mainbar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- EMAIL -->
     <EditText
         android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/newsearch"
+        android:hint="Email address"
+        android:inputType="textEmailAddress"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="#000000"
+        android:textColorHint="#777777"
+        app:layout_constraintTop_toBottomOf="@id/loginTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- PASSWORD -->
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/newsearch"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="#000000"
+        android:textColorHint="#777777"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- LOGIN BUTTON -->
+    <Button
+        android:id="@+id/loginSubmitButton"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#000000"
+        android:text="LOGIN"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- REGISTER -->
+    <TextView
+        android:id="@+id/registerText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="96dp" />
-
-    <!-- SEARCH -->
-
-    <!-- MOD IMAGE -->
-
-    <!-- MOD TITLE -->
-
-    <!-- PRICE -->
-
-    <!-- INSTALL BUTTON -->
-
-    <!-- DOWNLOAD ICON -->
-
-    <!-- INSTRUCTIONS -->
+        android:layout_marginTop="20dp"
+        android:text="Don't have an account? Register"
+        android:textColor="#555555"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/loginSubmitButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

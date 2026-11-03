@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 
 class SecondActivity : AppCompatActivity() {
@@ -19,6 +20,11 @@ class SecondActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val button = findViewById<ImageView>(R.id.homebutton)
 
+        button.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

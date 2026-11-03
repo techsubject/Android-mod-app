@@ -13,7 +13,28 @@
     <!-- HEADER -->
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/textInputEditText2"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/newsearch"
+        android:hint="What mod are we looking for today?"
+        android:inputType="text"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="#000000"
+        android:textColorHint="#777777"
+        app:layout_constraintBottom_toTopOf="@+id/bettercarsgtav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainbar" />
+
+    <TextView
+        android:id="@+id/mainbar"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:background="@color/black"
@@ -23,12 +44,18 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- SEARCH -->
+
+    <!-- MOD IMAGE -->
+
+    <!-- MOD TITLE -->
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/homebutton"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
@@ -39,43 +66,19 @@
         app:layout_constraintTop_toTopOf="@id/editTextText"
         app:srcCompat="@drawable/_049_13551_removebg_preview" />
 
-    <!-- SEARCH -->
-
-    <EditText
-        android:id="@+id/textInputEditText"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="2dp"
-        android:background="@color/newsearch"
-        android:hint="What mod are we looking for today?"
-        android:inputType="text"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:textColor="#000000"
-        android:textColorHint="#777777"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextText" />
-
-    <!-- MOD IMAGE -->
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="263dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="30dp"
         android:contentDescription="@null"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textInputEditText"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText2"
         app:srcCompat="@drawable/image3" />
-
-    <!-- MOD TITLE -->
 
     <Button
         android:id="@+id/button5"
@@ -117,7 +120,7 @@
     <!-- INSTALL BUTTON -->
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/downloadbutton"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="8dp"
@@ -146,9 +149,9 @@
         android:contentDescription="@null"
         android:scaleType="centerInside"
         android:src="@drawable/download"
-        app:layout_constraintBottom_toBottomOf="@id/button6"
-        app:layout_constraintEnd_toEndOf="@id/button6"
-        app:layout_constraintTop_toTopOf="@id/button6" />
+        app:layout_constraintBottom_toBottomOf="@id/downloadbutton"
+        app:layout_constraintEnd_toEndOf="@id/downloadbutton"
+        app:layout_constraintTop_toTopOf="@id/downloadbutton" />
 
     <!-- INSTRUCTIONS -->
 
@@ -165,6 +168,6 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button6" />
+        app:layout_constraintTop_toBottomOf="@id/downloadbutton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

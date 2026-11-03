@@ -3,6 +3,7 @@ package com.example.android_studio
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,39 +19,28 @@ class MainActivity : AppCompatActivity() {
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { view, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-
             view.setPadding(
                 systemBars.left,
                 systemBars.top,
                 systemBars.right,
                 systemBars.bottom
             )
-
             insets
         }
-        val button = findViewById<Button>(R.id.bettercarsgtav)
 
-        button.setOnClickListener {
-            val intent = Intent(this, SecondActivity::class.java)
-            startActivity(intent)
+        // GTA V mod
+        findViewById<Button>(R.id.bettercarsgtav).setOnClickListener {
+            startActivity(Intent(this, SecondActivity::class.java))
         }
-        val button2 = findViewById<Button>(R.id.f1carpackbutton)
 
-        button2.setOnClickListener {
-            val intent = Intent(this, Thirdactivity::class.java)
-            startActivity(intent)
+        // F1 car pack
+        findViewById<Button>(R.id.f1carpackbutton).setOnClickListener {
+            startActivity(Intent(this, Thirdactivity::class.java))
         }
-        val button3 = findViewById<Button>(R.id.f1carpackbutton)
 
-        button2.setOnClickListener {
-            val intent = Intent(this, Thirdactivity::class.java)
-            startActivity(intent)
+        // Login button
+        findViewById<ImageView>(R.id.loginbutton).setOnClickListener {
+            startActivity(Intent(this, FourthActivity::class.java))
         }
-        val button4 = findViewById<Button>(R.id.homebutton)
-
-    button2.setOnClickListener {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-    }
     }
 }
