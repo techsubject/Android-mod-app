@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 
 class FourthActivity : AppCompatActivity() {
@@ -24,6 +25,12 @@ class FourthActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+        val registerbutton = findViewById<TextView>(R.id.registerText)
+
+        registerbutton.setOnClickListener {
+            val intent = Intent(this, FourthActivity::class.java)
             startActivity(intent)
         }
     }

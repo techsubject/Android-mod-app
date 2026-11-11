@@ -20,7 +20,7 @@ class SecondActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val button = findViewById<ImageView>(R.id.homebutton)
+        val button = findViewById<ImageView>(R.id.homeButton)
 
         button.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)

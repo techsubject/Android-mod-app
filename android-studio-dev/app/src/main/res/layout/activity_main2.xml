@@ -12,34 +12,12 @@
 
     <!-- HEADER -->
 
-    <EditText
-        android:id="@+id/textInputEditText2"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/newsearch"
-        android:hint="What mod are we looking for today?"
-        android:inputType="text"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:textColor="#000000"
-        android:textColorHint="#777777"
-        app:layout_constraintBottom_toTopOf="@+id/bettercarsgtav"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainbar" />
-
     <TextView
-        android:id="@+id/mainbar"
+        android:id="@+id/headerTitle"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:background="@color/black"
         android:gravity="center"
-        android:inputType="text"
         android:text="Buy mods for games"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -48,22 +26,54 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- SEARCH -->
+    <ImageView
+        android:id="@+id/loginButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="Login"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/login_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/headerTitle"
+        app:layout_constraintBottom_toBottomOf="@id/headerTitle" />
 
-    <!-- MOD IMAGE -->
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/newsearch"
+        android:hint="What mod are we looking for today?"
+        android:inputType="text"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="#000000"
+        android:textColorHint="#777777"
+        app:layout_constraintTop_toBottomOf="@id/headerTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- MOD TITLE -->
+    <!-- MOD 1: GTA V -->
 
     <ImageView
-        android:id="@+id/homebutton"
+        android:id="@+id/homeButton"
         android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:contentDescription="@null"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:contentDescription="Home"
+        android:focusable="true"
         android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="@id/editTextText"
+        app:layout_constraintBottom_toTopOf="@+id/searchEditText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/editTextText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/_049_13551_removebg_preview" />
 
     <ImageView
@@ -77,7 +87,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText2"
+        app:layout_constraintTop_toBottomOf="@+id/searchEditText"
         app:srcCompat="@drawable/image3" />
 
     <Button

@@ -18,7 +18,7 @@ class Thirdactivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val button4 = findViewById<ImageView>(R.id.homebutton)
+        val button4 = findViewById<ImageView>(R.id.homeButton)
 
         button4.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)

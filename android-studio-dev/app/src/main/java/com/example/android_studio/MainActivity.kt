@@ -1,3 +1,4 @@
+
 package com.example.android_studio
 
 import android.content.Intent
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { view, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.mainLayout)) { view, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             view.setPadding(
                 systemBars.left,
@@ -29,17 +30,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         // GTA V mod
-        findViewById<Button>(R.id.bettercarsgtav).setOnClickListener {
+        findViewById<Button>(R.id.buttonGtaV).setOnClickListener {
             startActivity(Intent(this, SecondActivity::class.java))
         }
 
         // F1 car pack
-        findViewById<Button>(R.id.f1carpackbutton).setOnClickListener {
+        findViewById<Button>(R.id.buttonF1Pack).setOnClickListener {
             startActivity(Intent(this, Thirdactivity::class.java))
         }
 
         // Login button
-        findViewById<ImageView>(R.id.loginbutton).setOnClickListener {
+        findViewById<ImageView>(R.id.loginButton).setOnClickListener {
             startActivity(Intent(this, FourthActivity::class.java))
         }
     }
